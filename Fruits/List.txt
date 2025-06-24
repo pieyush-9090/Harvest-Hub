@@ -1,0 +1,20 @@
+1. Apple - Rs258/500g
+2. Banana - Rs47/500g
+3. Mango - Rs115/1Kg
+4. Amla - Rs48/250g
+5. Pomegranate - Rs211/500g
+6. Watermelon -Rs90/unit
+7. Pineapple- Rs115/unit
+8. Dragon Fruit - Rs145/500g
+9. Grapes - Rs96/250g
+10. Kiwi - Rs220/3 unit
+11. Black Grapes - Rs106/250g
+12. Avocado - Rs238/500g
+13. Strawberry - Rs145/1Kg
+14. Blueberry - Rs500/1Kg
+15. Coconut - Rs80/2 unit
+16. Litchi - Rs155/250g
+17. Papaya - Rs250/unit
+18. Cherry - Rs 175/200g
+19. Pear - Rs70/4 unit
+20. Orange - Rs112/250g
