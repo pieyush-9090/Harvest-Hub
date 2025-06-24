@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | HarvestHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>HarvestHub</h1>
+                <span class="tagline">Farm to Table Excellence</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i><span class="cart-count">0</span></a>
+                <a href="profile.html" class="icon-link active"><i class="fas fa-user"></i></a>
+                <a href="login.html" class="icon-link"><i class="fas fa-sign-in-alt"></i></a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="page-banner-content">
+            <h1>My Profile</h1>
+            <p>Manage your account and orders</p>
+        </div>
+    </div>
+
+    <section class="profile-section">
+        <div class="profile-sidebar">
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="profileimg.jpg" alt="User Avatar">
+                    <button class="change-avatar-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <h3 class="profile-name">Sample User</h3>
+                <p class="profile-email">sample.user@example.com</p>
+                <p class="member-since">Member since March 2024</p>
+            </div>
+            <ul class="profile-menu">
+                <li class="active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <li data-tab="orders"><i class="fas fa-shopping-bag"></i> My Orders</li>
+                <li data-tab="subscriptions"><i class="fas fa-sync-alt"></i> Subscriptions</li>
+                <li data-tab="addresses"><i class="fas fa-map-marker-alt"></i> Addresses</li>
+                <li data-tab="payment"><i class="fas fa-credit-card"></i> Payment Methods</li>
+                <li data-tab="account"><i class="fas fa-user-cog"></i> Account Settings</li>
+                <li class="logout"><i class="fas fa-sign-out-alt"></i> Logout</li>
+            </ul>
+        </div>
+        
+        <div class="profile-content">
+            <!-- Dashboard Tab -->
+            <div class="profile-tab active" id="dashboard">
+                <h2>Dashboard</h2>
+                
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <div class="stat-info">
+                            <h3 class='total-orders-count'>0</h3>
+                            <p>Total Orders</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-box"></i></div>
+                        <div class="stat-info">
+                            <h3>1</h3>
+                            <p>Active Subscriptions</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>Wishlist Items</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-medal"></i></div>
+                        <div class="stat-info">
+                            <h3>120</h3>
+                            <p>Reward Points</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-sections">
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Recent Orders</h3>
+                            <a href="#" class="view-all" data-tab="orders">View All</a>
+                        </div>
+                        <div class="recent-orders">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Active Subscription</h3>
+                            <a href="#" class="view-all" data-tab="subscriptions">Manage</a>
+                        </div>
+                        <div class="subscription-card">
+                            <div class="subscription-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="subscription-details">
+                                <h4>Weekly Harvest Box</h4>
+                                <p>Next delivery: March 15, 2025</p>
+                                <div class="subscription-status">Active</div>
+                            </div>
+                            <div class="subscription-actions">
+                                <button class="btn secondary-btn sm-btn">Skip Next</button>
+                                <button class="btn primary-btn sm-btn">Customize</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Orders Tab -->
+            <div class="profile-tab" id="orders">
+                <h2>My Orders</h2>
+                
+                <div class="orders-filter">
+                    <div class="filter-group">
+                        <label for="orderStatus">Status:</label>
+                        <select id="orderStatus">
+                            <option value="all">All Orders</option>
+                            <option value="processing">Processing</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="orderDate">Date:</label>
+                        <select id="orderDate">
+                            <option value="all">All Time</option>
+                            <option value="30days">Last 30 Days</option>
+                            <option value="6months">Last 6 Months</option>
+                            <option value="year">Last Year</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" placeholder="Search orders...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                
+                <div class="orders-list">
+                    
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Subscriptions Tab -->
+            <div class="profile-tab" id="subscriptions">
+                <h2>My Subscriptions</h2>
+                
+                <div class="subscription-card active-subscription">
+                    <div class="subscription-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="subscription-details">
+                        <h4>Weekly Harvest Box</h4>
+                        <p>Recurring every Wednesday</p>
+                        <p>Next delivery: March 15, 2025</p>
+                        <div class="subscription-status">Active</div>
+                    </div>
+                    <div class="subscription-price">
+                        <span class="price">Rs 34.99</span>
+                        <span class="period">/ week</span>
+                    </div>
+                    <div class="subscription-actions">
+                        <button class="btn secondary-btn">Skip Next</button>
+                        <button class="btn primary-btn">Customize</button>
+                        <button class="btn cancel-btn">Cancel</button>
+                    </div>
+                </div>
+                
+                <h3 class="section-subtitle">Available Subscriptions</h3>
+                
+                <div class="available-subscriptions">
+                    <div class="subscription-card">
+                        <div class="subscription-icon">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                        <div class="subscription-details">
+                            <h4>Vegetable Box</h4>
+                            <p>Fresh seasonal vegetables</p>
+                            <p>Available weekly or bi-weekly</p>
+                        </div>
+                        <div class="subscription-price">
+                            <span class="price">Rs 29.99</span>
+                            <span class="period">/ delivery</span>
+                        </div>
+                        <div class="subscription-actions">
+                            <button class="btn primary-btn">Subscribe</button>
+                        </div>
+                    </div>
+                    
+                    <div class="subscription-card">
+                        <div class="subscription-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="subscription-details">
+                            <h4>Fruit Box</h4>
+                            <p>Seasonal fruits selection</p>
+                            <p>Available weekly or bi-weekly</p>
+                        </div>
+                        <div class="subscription-price">
+                            <span class="price">Rs 32.99</span>
+                            <span class="period">/ delivery</span>
+                        </div>
+                        <div class="subscription-actions">
+                            <button class="btn primary-btn">Subscribe</button>
+                        </div>
+                    </div>
+                    
+                    <div class="subscription-card">
+                        <div class="subscription-icon">
+                            <i class="fas fa-cheese"></i>
+                        </div>
+                        <div class="subscription-details">
+                            <h4>Dairy & Eggs Box</h4>
+                            <p>Farm-fresh dairy products and eggs</p>
+                            <p>Available weekly</p>
+                        </div>
+                        <div class="subscription-price">
+                            <span class="price">Rs 39.99</span>
+                            <span class="period">/ delivery</span>
+                        </div>
+                        <div class="subscription-actions">
+                            <button class="btn primary-btn">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Addresses Tab -->
+            <div class="profile-tab" id="addresses">
+                <h2>My Addresses</h2>
+                
+                <div class="addresses-container">
+                    <div class="address-card default">
+                        <div class="address-badge">Default</div>
+                        <h4>Home</h4>
+                        <p>Test Sharma</p>
+                        <p>Phone: +91 98765 43210</p>
+                        <p>Flat No. 12B, Sunrise Apartments</p>
+                        <p>MG Road, Andheri East</p>
+                        <p>Mumbai - 400093</p>
+                        <p>Maharashtra, India</p>
+                        <div class="address-actions">
+                            <button class="btn secondary-btn">Edit</button>
+                            <button class="btn text-btn">Delete</button>
+                        </div>
+                    </div>
+                    
+                    <div class="address-card">
+                        <h4>Office</h4>
+                        <p>Test Verma</p>
+                        <p>Phone: +91 87654 32109</p>
+                        <p>Office No. 200, Tech Park</p>
+                        <p>Electronic City, Phase 1</p>
+                        <p>Bengaluru - 560100</p>
+                        <p>Karnataka, India</p>
+                        <div class="address-actions">
+                            <button class="btn secondary-btn">Edit</button>
+                            <button class="btn text-btn">Delete</button>
+                            <button class="btn text-btn">Set as Default</button>
+                        </div>
+                    </div>
+                    
+                    <div class="address-card add-new">
+                        <div class="add-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <h4>Add New Address</h4>
+                        <button class="btn primary-btn">Add Address</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Methods Tab -->
+            <div class="profile-tab" id="payment">
+                <h2>Payment Methods</h2>
+                
+                <div class="payment-methods-container">
+                    <div class="payment-card default">
+                        <div class="payment-badge">Default</div>
+                        <div class="card-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="card-details">
+                            <h4>Visa ending in 4242</h4>
+                            <p>Expires: 05/2027</p>
+                        </div>
+                        <div class="payment-actions">
+                            <button class="btn secondary-btn">Edit</button>
+                            <button class="btn text-btn">Delete</button>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <div class="card-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="card-details">
+                            <h4>Mastercard ending in 8765</h4>
+                            <p>Expires: 11/2026</p>
+                        </div>
+                        <div class="payment-actions">
+                            <button class="btn secondary-btn">Edit</button>
+                            <button class="btn text-btn">Delete</button>
+                            <button class="btn text-btn">Set as Default</button>
+                        </div>
+                    </div>
+        <!-- Account Settings Tab -->
+        <div class="profile-tab" id="account">
+            <h2>Account Settings</h2>
+            
+            <div class="account-settings-container">
+                <div class="settings-section">
+                    <h3>Personal Information</h3>
+                    <form class="settings-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" value="Michael">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" value="Chen">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="michael.chen@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Date of Birth</label>
+                            <input type="date" id="birthdate" value="1985-06-15">
+                        </div>
+                        <button type="submit" class="btn primary-btn">Save Changes</button>
+                    </form>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Change Password</h3>
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input type="password" id="confirmPassword">
+                        </div>
+                        <button type="submit" class="btn primary-btn">Update Password</button>
+                    </form>
+                </div>
+                
+                <div class="settings-section">
+                    <h3>Notification Preferences</h3>
+                    <form class="settings-form">
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Order updates and shipping notifications</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Subscription reminders and updates</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Promotions, discounts, and special offers</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox">
+                                <span>Product recommendations</span>
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" checked>
+                                <span>Newsletter</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Save Preferences</button>
+                    </form>
+                </div>
+                
+                <div class="settings-section danger-zone">
+                    <h3>Danger Zone</h3>
+                    <p>Once you delete your account, there is no going back. Please be certain.</p>
+                    <button class="btn delete-account-btn">Delete Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <div class="footer-logo">
+                <h2>HarvestHub</h2>
+                <p>Farm to Table Excellence</p>
+            </div>
+            <p class="footer-description">Premium agricultural products sourced directly from sustainable farms to your table.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Customer Service</h3>
+            <ul class="footer-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Return & Refund</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i> 12 G.T. Road, Delhi, India</li>
+                <li><i class="fas fa-phone-alt"></i> +91 8294XXXXXX</li>
+                <li><i class="fas fa-envelope"></i> info@harvesthub.com</li>
+                <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 HarvestHub. All Rights Reserved.</p>
+        <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="profile.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | HarvestHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>HarvestHub</h1>
+                <span class="tagline">Farm to Table Excellence</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i><span class="cart-count">0</span></a>
+                <a href="profile.html" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="login.html" class="icon-link"><i class="fas fa-sign-in-alt"></i></a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('shoppbg.jpg') center/cover no-repeat;">
+        <div class="page-banner-content">
+            <h1>Our Products</h1>
+            <p>Fresh, organic, and sustainably sourced</p>
+        </div>
+    </div>
+
+    <section class="shop-container">
+        <div class="filter-sidebar">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <ul class="filter-list">
+                    <li><a href="shop.html" class="active">All Products</a></li>
+                    <li><a href="shop11.html">Fruits</a></li>
+                    <li><a href="shop21.html">Vegetables</a></li>
+                    <li><a href="shop3.html">Herbs & Spices</a></li>
+                    <li><a href="shop4.html">Nuts & Seeds</a></li>
+                </ul>
+            </div>
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-slider">
+                    <input type="range" min="0" max="600" value="600" class="slider" id="priceRange">
+                    <div class="price-range-values">
+                        <span>Rs 0</span>
+                        <span id="priceValue">Rs 600</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Certifications</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" checked> Organic</label>
+                    <label><input type="checkbox"> Non-GMO</label>
+                    <label><input type="checkbox"> Fair Trade</label>
+                    <label><input type="checkbox"> Pesticide-Free</label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Rating</h3>
+                <div class="star-filter">
+                    <label>
+                        <input type="radio" name="rating" value="5">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="4">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="3">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <button class="btn primary-btn apply-filter-btn">Apply Filters</button>
+            <button class="btn secondary-btn reset-filter-btn">Reset Filters</button>
+        </div>
+        
+        <div class="products-section">
+            <div class="products-header">
+                <div class="products-count">
+                    <p>Showing <span>25+</span> products</p>
+                </div>
+                <!-- <div class="products-sort">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div> -->
+                <div class="view-options">
+                    <button class="view-btn grid-view active"><i class="fas fa-th"></i></button>
+                    <button class="view-btn list-view"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Fruits/mango.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Mango</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 115<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/apple.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Kashmir Apple</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 258<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/Banana.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Banana Senoka</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 70<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/Pomegranate.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pomegranate</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 211<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/Watermelon.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Watermelon</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 90<span>/ unit</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/DragonFruit.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Dragon Fruit</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5)</span>
+                        </div>
+                        <p class="product-price">Rs 290<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/Green Grapes.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Grapes Green</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5)</span>
+                        </div>
+                        <p class="product-price">Rs 68<span>/ 500g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="Fruits/Pineapple.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pineapple</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 115<span>/ unit</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Vegetables/Potato.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Potato</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 70<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Vegetables/Onion.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Onion</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 85<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Vegetables/LadyFinger.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>LadyFinger</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 24<span>/ 250 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Vegetables/Carrot.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Carrot</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 45<span>/ 250 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Vegetables/Tomato.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Tomato</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 70<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Herbs & Spices/black pepper.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Black Pepper</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 160<span>/ 100 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Herbs & Spices/cinnamon.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cinnamon</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5)</span>
+                        </div>
+                        <p class="product-price">Rs 70<span>/ 50 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge sale">Sale</div>
+                    <div class="product-image">
+                        <img src="Herbs & Spices/saffron.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Saffron</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 500<span>/ 5 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Herbs & Spices/basil.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Basil</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 20<span>/ 50 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Herbs & Spices/clove.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Clove</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 160<span>/ 50 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Nuts & Seeds/cashew.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cashew</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 800<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Nuts & Seeds/pistachio.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pistachio</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 980<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Nuts & Seeds/walnut.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Walnut</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 1200<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Nuts & Seeds/pumpkin_seed.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pumpkin Seeds</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 150<span>/ 250 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Nuts & Seeds/coriander_seed.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Coriander Seeds</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 130<span>/ kg</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Nuts & Seeds/chia.jpg">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chia Seeds</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <p class="product-price">Rs 130<span>/ 100 g</span></p>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <h2>HarvestHub</h2>
+                    <p>Farm to Table Excellence</p>
+                </div>
+                <p class="footer-description">Premium agricultural products sourced directly from sustainable farms to your table.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 12 G.T. Road, Delhi, India</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 8294XXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@harvesthub.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HarvestHub. All Rights Reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
+

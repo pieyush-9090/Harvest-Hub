@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | HarvestHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>HarvestHub</h1>
+                <span class="tagline">Farm to Table Excellence</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link"><i class="fas fa-shopping-basket"></i><span class="cart-count">3</span></a>
+                <a href="profile.html" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="login.html" class="icon-link"><i class="fas fa-sign-in-alt"></i></a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="checkout-progress">
+        <div class="progress-step active">
+            <div class="step-number">1</div>
+            <div class="step-label">Shopping Cart</div>
+        </div>
+        <div class="progress-line active"></div>
+        <div class="progress-step active">
+            <div class="step-number">2</div>
+            <div class="step-label">Checkout</div>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step">
+            <div class="step-number">3</div>
+            <div class="step-label">Confirmation</div>
+        </div>
+    </div>
+
+    <section class="checkout-section">
+        <div class="checkout-container">
+            <div class="checkout-details">
+                <h2>Checkout</h2>
+                
+                <div class="checkout-form">
+                    <div class="form-section">
+                        <h3>Shipping Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <select id="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="GJ">Gujarat</option>
+                                    <option value="WB">West Bengal</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="TS">Telangana</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zipCode">Pin Code</label>
+                                <input type="text" id="zipCode" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select id="country" required>
+                                    <option value="IN">India</option>
+                                    <option value="NP">Nepal</option>
+                                    <option value="BT">Bhutan</option>
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="LK">Sri Lanka</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Delivery Options</h3>
+                        <div class="delivery-options">
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery" value="standard" checked>
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span class="option-title">Standard Delivery</span>
+                                        <span class="option-price">₹19</span>
+                                    </div>
+                                    <span class="option-description">Delivery within 3-5 business days</span>
+                                </div>
+                            </label>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery" value="express">
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span class="option-title">Express Delivery</span>
+                                        <span class="option-price">₹99</span>
+                                    </div>
+                                    <span class="option-description">Delivery within 1-2 business days</span>
+                                </div>
+                            </label>
+                            <label class="delivery-option">
+                                <input type="radio" name="delivery" value="same-day">
+                                <div class="option-content">
+                                    <div class="option-header">
+                                        <span class="option-title">Same Day Delivery</span>
+                                        <span class="option-price">₹199</span>
+                                    </div>
+                                    <span class="option-description">Available for orders placed before 11 AM</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="credit-card" checked>
+                                <div class="method-content">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Credit/Debit Card</span>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="upi">
+                                <div class="method-content">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>UPI</span>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="netbanking">
+                                <div class="method-content">
+                                    <i class="fas fa-university"></i>
+                                    <span>Net Banking</span>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="cod">
+                                <div class="method-content">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Cash on Delivery</span>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div id="credit-card-form" class="payment-details">
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiryDate">Expiry Date</label>
+                                    <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nameOnCard">Name on Card</label>
+                                <input type="text" id="nameOnCard" required>
+                            </div>
+                        </div>
+                        
+                        <div id="upi-form" class="payment-details" style="display: none;">
+                            <div class="form-group">
+                                <label for="upiId">UPI ID</label>
+                                <input type="text" id="upiId" placeholder="yourname@upi" required>
+                            </div>
+                        </div>
+                        
+                        <div id="netbanking-form" class="payment-details" style="display: none;">
+                            <div class="form-group">
+                                <label for="bankName">Select Bank</label>
+                                <select id="bankName" required>
+                                    <option value="">Select Bank</option>
+                                    <option value="sbi">State Bank of India</option>
+                                    <option value="hdfc">HDFC Bank</option>
+                                    <option value="icici">ICICI Bank</option>
+                                    <option value="axis">Axis Bank</option>
+                                    <option value="kotak">Kotak Mahindra Bank</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-items">
+                    <!-- Dynamic items will be inserted here by JavaScript -->
+                </div>
+                <div class="summary-totals">
+                    <div class="summary-row subtotal">
+                        <span>Subtotal</span>
+                        <span>Rs 0.00</span>
+                    </div>
+                    <div class="summary-row shipping">
+                        <span>Shipping</span>
+                        <span id="shipping-cost">Rs 19</span>
+                    </div>
+                    <div class="summary-row discount">
+                        <span>Discount</span>
+                        <span>-Rs 0.00</span>
+                    </div>
+                    <div class="summary-row tax">
+                        <span>GST (18%)</span>
+                        <span>Rs 0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total-amount">Rs 19</span>
+                    </div>
+                </div>
+                <div class="promo-code">
+                    <input type="text" placeholder="Enter promo code">
+                    <button class="btn primary-btn">Apply</button>
+                </div>
+                <button class="btn primary-btn place-order-btn">Place Order</button>
+                <div class="secure-checkout">
+                    <i class="fas fa-lock"></i> Secure Checkout
+                </div>
+                <div class="back-to-cart">
+                    <a href="cart.html"><i class="fas fa-arrow-left"></i> Back to Cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <h2>HarvestHub</h2>
+                    <p>Farm to Table Excellence</p>
+                </div>
+                <p class="footer-description">Premium agricultural products sourced directly from sustainable farms to your table.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 12 G.T. Road, Delhi, India</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 8294XXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@harvesthub.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HarvestHub. All Rights Reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

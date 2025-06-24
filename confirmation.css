@@ -1,0 +1,136 @@
+/* Confirmation page styles */
+.confirmation-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #4a7c59;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.success-icon i {
+    font-size: 40px;
+    color: white;
+}
+
+.confirmation-message {
+    margin-bottom: 30px;
+}
+
+.confirmation-message h2 {
+    font-size: 1.8rem;
+    color: #2a5c39;
+    margin-bottom: 10px;
+}
+
+.confirmation-message p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.detail-box {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f7;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.detail-box h3 {
+    font-size: 1.2rem;
+    color: #2a5c39;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8eee5;
+}
+
+.detail-box p {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.action-buttons {
+    margin-top: 30px;
+}
+
+.action-buttons .btn {
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .order-details {
+        flex-direction: column;
+    }
+    
+    .detail-box {
+        margin: 10px 0;
+    }
+}
+/* @media print {
+    body * {
+        visibility: hidden;
+    }
+    #confirmation-section, #confirmation-section * {
+        visibility: visible;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 auto;
+        width: 80%;
+        text-align: left;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+} */
+
+@media print {
+    body * {
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .confirmation-section,
+    .confirmation-section * {
+        visibility: visible;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0 auto;
+        width: 80%;
+        text-align: left;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: white !important;
+        color: black !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .action-buttons {
+        display: none !important; /* Hide action buttons during print */
+    }
+}

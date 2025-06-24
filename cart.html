@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | HarvestHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>HarvestHub</h1>
+                <span class="tagline">Farm to Table Excellence</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="cart.html" class="icon-link active"><i class="fas fa-shopping-basket"></i><span class="cart-count">3</span></a>
+                <a href="profile.html" class="icon-link"><i class="fas fa-user"></i></a>
+                <a href="login.html" class="icon-link"><i class="fas fa-sign-in-alt"></i></a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="page-banner-content">
+            <h1>Your Shopping Cart</h1>
+            <p>Review and checkout your selected items</p>
+        </div>
+    </div>
+
+    <section class="cart-section">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h2>Shopping Cart (0 items)</h2>
+                <button class="clear-cart-btn">Clear Cart</button>
+            </div>
+
+            <div class="cart-items">
+                <!-- <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1594282486552-05a3b6fbfb63" alt="Organic Tomatoes">
+                    </div>
+                    <div class="item-details">
+                        <h3>Organic Tomatoes</h3>
+                        <p class="item-category">Vegetables</p>
+                        <div class="item-price">$4.99 <span>/ kg</span></div>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn decrease"><i class="fas fa-minus"></i></button>
+                        <input type="number" value="2" min="1" max="99">
+                        <button class="quantity-btn increase"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="item-total">$9.98</div>
+                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716" alt="Fresh Avocados">
+                    </div>
+                    <div class="item-details">
+                        <h3>Fresh Avocados</h3>
+                        <p class="item-category">Fruits</p>
+                        <div class="item-price">$6.99 <span>/ kg</span></div>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn decrease"><i class="fas fa-minus"></i></button>
+                        <input type="number" value="1" min="1" max="99">
+                        <button class="quantity-btn increase"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="item-total">$6.99</div>
+                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1573246123716-6b1782bfc499" alt="Honey Jar">
+                    </div>
+                    <div class="item-details">
+                        <h3>Raw Wildflower Honey</h3>
+                        <p class="item-category">Honey & Preserves</p>
+                        <div class="item-price">$12.99 <span>/ jar</span></div>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn decrease"><i class="fas fa-minus"></i></button>
+                        <input type="number" value="1" min="1" max="99">
+                        <button class="quantity-btn increase"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="item-total">$12.99</div>
+                    <button class="remove-item"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+
+            <div class="cart-actions">
+                <div class="coupon-section">
+                    <input type="text" placeholder="Enter coupon code">
+                    <button class="btn primary-btn">Apply Coupon</button>
+                </div>
+                <!-- <button class="btn secondary-btn update-cart">Update Cart</button> -->
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-row subtotal">
+                <span>Subtotal</span>
+                <span>Rs 00.00</span>
+            </div>
+            <div class="summary-row shipping">
+                <span>Shipping</span>
+                <span>Rs 19.00</span>
+            </div>
+            <div class="summary-row discount">
+                <span>Discount</span>
+                <span>Rs 0.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>Rs 19.00</span>
+            </div>
+            <button class="btn primary-btn checkout-btn">Proceed to Checkout</button>
+            <div class="continue-shopping">
+                <a href="shop.html"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+            </div>
+            <div class="payment-options">
+                <p>We Accept:</p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended-products">
+        <h2 class="section-title">You Might Also Like</h2>
+        <div class="product-slider">
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="Fruits/cherry.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Cherry</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <p class="product-price">Rs 160<span>/ 250 g</span></p>
+                    <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="Fruits/Pear.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Fresh Pear</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5)</span>
+                    </div>
+                    <p class="product-price">Rs 140<span>/ 500 g</span></p>
+                    <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="Fruits/Orange.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Juicy Oranges</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5)</span>
+                    </div>
+                    <p class="product-price">Rs 100<span>/ kg</span></p>
+                    <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">New</div>
+                <div class="product-image">
+                    <img src="Fruits/guava.jpg">
+                </div>
+                <div class="product-info">
+                    <h3>Guava</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5)</span>
+                    </div>
+                    <p class="product-price">Rs 90<span>/ kg</span></p>
+                    <button class="btn add-to-cart-btn"><i class="fas fa-shopping-basket"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <h2>HarvestHub</h2>
+                    <p>Farm to Table Excellence</p>
+                </div>
+                <p class="footer-description">Premium agricultural products sourced directly from sustainable farms to your table.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 12 G.T. Road, Delhi, India</li>
+                    <li><i class="fas fa-phone-alt"></i> +91 8294XXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@harvesthub.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HarvestHub. All Rights Reserved.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-apple-pay"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
+
